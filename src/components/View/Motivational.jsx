@@ -39,16 +39,7 @@ export default function Motivational() {
         
     const radioClicked2 = (n, d) =>  dispatchC({type:'c', value:d, name: n})
 
-    //console.log(state4A)
-    //console.log(state4B)
-    //console.log(state4C)
-
-    // const nextPrev = () =>{
-    //     captureQue4aValues.countDispatch({type:'que4a', value:state4A})
-    //     captureQue4bValues.countDispatch({type:'que4b', value:state4B})
-    //     captureQue4cValues.countDispatch({type:'que4c', value:state4C})
-    // }
-
+    
     useEffect(()=>{
         if(state4A){
             if( Object.keys(state4A).length === data.que4a.q.length){
@@ -121,7 +112,7 @@ export default function Motivational() {
                                 </div>)}
                             </div>
                         )}
-                        {/* <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button> */}
+                        
                     </div>
             </div>
             

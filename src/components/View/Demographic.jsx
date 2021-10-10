@@ -4,7 +4,7 @@ import axios from 'axios'
 import { getResponce } from '../../App'
 import data from '../../data.json'
 
-function Demographic() {
+function Demographic({newState}) {
     const captureQue1Values = useContext(getResponce)
     const [user, setUser] = useState()
     const [rel, setRel] = useState()
@@ -80,13 +80,14 @@ function Demographic() {
         if(userNew){
             
 
-        if(userNew.religion && userNew.religion === "Others"){ dispatch({type:'demo', name:"religion", value:rel}) }
+            if(userNew.religion && userNew.religion === "Others"){ dispatch({type:'demo', name:"religion", value:rel}) }
             if(Object.keys(userNew).length === data.que1.q.length){
                 captureQue1Values.countDispatch({type:'que1', value:userNew})
                 captureQue1Values.countDispatch({type:'count', value:2})
             }
         }
     },[userNew])
+
     
     
     console.log(userNew)
@@ -104,9 +105,9 @@ function Demographic() {
                                         <div className="radioInline">
                                             {res.des.map(desc => 
                                             <label for={desc} >
-                                                <input type="radio" id={res.label} name={res.name} value={desc} onClick={ ()=> radioClicked(`${res.name}`,`${desc}`)}/>{desc}
+                                                <input type="radio" id={res.label} name={res.name} value={desc} onClick={ ()=> radioClicked(`${res.name}`,`${desc}`)} />{desc}
                                             </label>)}
-                                            {res.name === "religion" ? <label for={res.name} ><input type="text" id={res.label} name={res.name}  onChange={ e => setRel(e.target.value)} placeholder="please specify"/></label> :
+                                            {res.name === "religion" ? <label for={res.name} ><input type="text" id={res.label} name={res.name}  onChange={ e => setRel(e.target.value)} placeholder="please specify" /></label> :
                                             res.name === "education" ? <label for={res.name} ><input type="text" id={res.label} name={res.name}  onChange={ e => setCourses(e.target.value)} placeholder="CA/ CS/ CMA etc."/></label> :
                                             res.name === "industry" ? <label for={res.name} ><input type="text" id={res.label} name={res.name}  onChange={ e => setInd(e.target.value)} placeholder="please specify"/></label> :
                                             res.name === "occupation" ? <label for={res.name} ><select type="text" id={res.label} name={res.name}  onChange={ e => setService(e.target.value)} >
@@ -116,7 +117,7 @@ function Demographic() {
                                                 <option name={res.name} value="Private Sector" >Private Sector</option>
                                                 </select></label> :
                                             res.name === "residence" ? 
-                                                <><label for={res.name} ><input type="radio"  name={res.name} value={"Metro"} onClick={ ()=> radioClicked(`${res.name}`, city ? city :"Metro")}/>Metro City <input type="text"  onChange={ e => setCity(e.target.value)} placeholder="Mumbai/ Delhi/ Bangalore/ Kolkata/ Chennai"/></label>
+                                                <><label for={res.name} ><input type="radio"  name={res.name} value={"Metro"} onClick={ ()=> radioClicked(`${res.name}`, city ? city :"Metro")} />Metro City <input type="text"  onChange={ e => setCity(e.target.value)} placeholder="Mumbai/ Delhi/ Bangalore/ Kolkata/ Chennai"/></label>
                                                 <label for={res.name} ><input type="radio"  name={res.name} value={"II"} onClick={ ()=> radioClicked(`${res.name}`, city2 ? city2 :"II")}/>II tier City <input type="text"   onChange={ e => setCity2(e.target.value)} placeholder="Pune /Cochin/ Jaipur/Lucknow etc."/></label>
                                                 <label for={res.name} ><input type="radio"  name={res.name} value={"III"} onClick={ ()=> radioClicked(`${res.name}`, city3 ? city3 : "III")}/>III tier City <input type="text"   onChange={ e => setCity3(e.target.value)} placeholder="Coimbatore / Nashik etc."/></label></> :    
                                             '' }
@@ -127,7 +128,7 @@ function Demographic() {
                             
                             
                         </form>
-                        {/* <button className="btn btn-primary next" onClick={()=>nextPrev()}>Next</button> */}
+                        
                     </div>
                 </div>
             

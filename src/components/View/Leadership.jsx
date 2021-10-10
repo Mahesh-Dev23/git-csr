@@ -39,13 +39,7 @@ export default function Leadership() {
     // user reducer 
     const [newState5, dispatch] = useReducer( reducer, radio5Array)
     const [newState5b, dispatch2] = useReducer( reducer2, radio5bArray)
-    //console.log(newState5)
-    //console.log(newState5b)
-
-    // const nextPrev = () =>{
-    //     captureQue5aValues.countDispatch({type:'que5a', value:newState5})
-    //     captureQue5bValues.countDispatch({type:'que5b', value:newState5b})
-    // }
+    
 
     useEffect(()=>{
         if(newState5){
@@ -84,7 +78,7 @@ export default function Leadership() {
                         <h4>{Data.que5b.des5}</h4>
                         <Radio5bValue.Provider value={{countState2: newState5b, countDispatch2: dispatch2}}><Radio5 data={Data.que5b} id={"leadership2"} /></Radio5bValue.Provider>
                     </div>
-                    {/* <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button> */}
+                    
             </div>
             
         </div>

@@ -46,32 +46,7 @@ function ROI({newState}) {
     const [state3B, dispatchB ] = useReducer(reducer, radio3B)
     const [state3C, dispatchC ] = useReducer(reducer, radio3C)
     const [state3D, dispatch ] = useReducer(reducer, radio3D)
-    //console.log(state3A)
-    //console.log(state3B)
-    //console.log(state3D)
-    //console.log(state3C)
-
-    const nextPrev = () =>{
-        // captureQue3aValues.countDispatch({type:'que3a', value:state3A})
-        // captureQue3bValues.countDispatch({type:'que3b', value:state3B})
-        // captureQue3cValues.countDispatch({type:'que3c', value:state3C})
-        // captureQue3dValues.countDispatch({type:'que3d', value:state3D})
-    }
-
-    // const radioClicked = (n, d) => {
-    //     dispatch({type:'demo', value:d, name: n})
-    //     captureQue3aValues.countDispatch({type:'que3a', value:state3A})
-    //     captureQue3bValues.countDispatch({type:'que3b', value:state3B})
-    //     captureQue3cValues.countDispatch({type:'que3c', value:state3C})
-    //     captureQue3dValues.countDispatch({type:'que3d', value:state3D})
-    // }
     
-   
-
-    // useEffect(()=>{captureQue3aValues.countDispatch({type:'que3a', value:state3A})},[radio3A])
-    // useEffect(()=>{captureQue3bValues.countDispatch({type:'que3b', value:state3B})},[radio3B])
-    // useEffect(()=>{captureQue3cValues.countDispatch({type:'que3c', value:state3C})},[radio3C])
-    // useEffect(()=>{captureQue3dValues.countDispatch({type:'que3d', value:state3D})},[radio3D])
 
     useEffect(()=>{
         if(state3A){
@@ -120,7 +95,7 @@ function ROI({newState}) {
         }
     },[state3A, state3B, state3C, state3D])
 
-       // console.log(newState)
+       
     return (
         <div className="section" id="roi" >
             <div className="panel panel-default">
@@ -143,7 +118,7 @@ function ROI({newState}) {
                             <div className="selectPanel">{data3.que3d.des3}</div>   
                         </div>
                         <Radio3DValue.Provider value={{countState: state3D, countDispatch: dispatch}}><Radio5 data={data3.que3d} id={"roi4"} /></Radio3DValue.Provider>
-                        {/* <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button> */}
+                        
                     </div>
             </div>
         </div>

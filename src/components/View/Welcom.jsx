@@ -3,6 +3,7 @@ import React,{useState, useReducer, useEffect, useContext} from 'react'
 import { getResponce } from '../../App'
 import data from '../../data.json'
 import img from '../../manoj.png'
+import post from '../Controller/post'
 
 function Welcom() {
     const captureDemoValues = useContext(getResponce)
@@ -36,19 +37,23 @@ function Welcom() {
             if(Object.keys(userNew).length === 3){
                 captureDemoValues.countDispatch({type:'demo', value:userNew})
                 captureDemoValues.countDispatch({type:'count', value:1})
+                post(userNew)
             }
             console.log(Object.keys(userNew).length )
+            
         }
     },[userNew])
     
     console.log( userNew )
     return (
-        <div className="section" id="welcome">
+        <div  id="welcome">
             <div className="profilepic"><img src={img}  width="100%" height="100%"/></div>
-            <p>Hi friends, I am Manoj Pansare. Welcome to my Corporate Social Responsibility - survey page. Purpose of this survey is purely academic. This survey is part of my research paper on Corporate Social Responsibility, which is my subject for Phd degree. </p>
-            <p>Corporate Social Responsibility, the name itself suggests the content. In today's scenario from carbon emmision, global warming to fulfilling promises of consumer at very end level are considered ad reponsibilities of Corporate. The survey is also about finding awareness of Corporate Social Responsibilities among us as society, governing bodies and corporates.</p>
-            {/* <h5>For this survey feedback I will be collecting only the data that you are submitting as answers. I have not set any cookies or any other backend process to collect any data besides your answers. Also your feedback is confidencial and stays with me, as support to my research work. Thank you for putting your valueble time. </h5> 
-            <h5>Please start by submitting name and 10 digit mobile number and clicking the start button thereafter. While you are participating, you can nevigate back to the feedback that you have already completed and can change it, if you feel so. Final data is submitted at the end. After final submition no one can visit your feedback except me. </h5> */}
+                <div id="intro">
+                    <p>Hi friends, I am Manoj Pansare. Welcome to my Corporate Social Responsibility - survey page. Purpose of this survey is purely academic. This survey is part of my research paper on Corporate Social Responsibility, which is my subject for Phd degree. </p>
+                    <p>Corporate Social Responsibility, the name itself suggests the content. In today's scenario from carbon emmision, global warming to fulfilling promises of consumer at very end level are considered ad reponsibilities of Corporate. The survey is also about finding awareness of Corporate Social Responsibilities among us as society, governing bodies and corporates.</p>
+                    <h5>For this survey feedback I will be collecting only the data that you are submitting as answers. I have not set any cookies or any other backend process to collect any data besides your answers. Also your feedback is confidencial and stays with me, as support to my research work. Thank you for putting your valueble time. </h5> 
+                    <h5>Please start by submitting name and 10 digit mobile number and clicking the start button thereafter. While you are participating, you can nevigate back to the feedback that you have already completed and can change it, if you feel so. Final data is submitted at the end. After final submition no one can visit your feedback except me. </h5>
+                </div>
             <form  id="demo" class="form-inline">
                 <div className="form-group">
                 

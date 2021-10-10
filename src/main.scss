@@ -181,9 +181,12 @@ label {
 	}
 }
 #welcome {
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
 	background: $deepgray;
-	padding-top: 8vh;
-	overflow-y: scroll;
+	padding: 12vh 15vw;
+
 	p {
 		color: $gray;
 		font-size: 16px;
@@ -340,6 +343,16 @@ label {
 		min-height: 100vh;
 		padding: 12vh 6vw;
 		padding-top: 12vh;
+	}
+	#welcome {
+		width: 100vw;
+		height: 100vh;
+		min-height: 100vh;
+		padding: 5vh;
+	}
+	#intro {
+		height: 50vh;
+		overflow-y: scroll;
 	}
 	.profilepic {
 		width: 80px;

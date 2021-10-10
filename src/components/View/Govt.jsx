@@ -21,12 +21,7 @@ export default function Govt() {
     const radioClicked = (n, d) => {
         dispatch({type:'govt', value:d, name: n})
     }
-    //console.log(state4)
-
-    // const nextPrev = () =>{
-    //     captureQue6Values.countDispatch({type:'que6', value:state6})
-    // }
-
+    
     useEffect(()=>{
         if(state6){
             if( Object.keys(state6).length === data.que6.q.length){
@@ -60,7 +55,7 @@ export default function Govt() {
                                 </div>
                             </div>
                         )}
-                        {/* <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button>     */}
+                        
                     </div>
                     
             </div>

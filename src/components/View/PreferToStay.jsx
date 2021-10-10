@@ -1,7 +1,7 @@
 import React,{useState, useReducer, useContext, useEffect} from 'react'
 
 import Data from '../../data.json'
-import {Link} from 'react-scroll'
+
 import Radio5 from './Radio5'
 import { getResponce } from '../../App'
 
@@ -21,18 +21,14 @@ function PreferToStay() {
     }
 
     const [state7, dispatch ] = useReducer(reducer, radio7)
-    //console.log(state7)
-
-    // const nextPrev = () =>{
-    //     captureQue7Values.countDispatch({type:'que7', value:state7})
-    //     document.getElementById("main").class="slideUp"
-    // }
-
+    
+    const date = new Date()
     useEffect(()=>{
         if(state7){
             if( Object.keys(state7).length === Data.que7.q.length){
                 captureQue7Values.countDispatch({type:'que7', value:state7})
                 captureQue7Values.countDispatch({type:'count', value:8})
+                captureQue7Values.countDispatch({type:'file', value:date})
                 console.log(state7)
 
             }
@@ -54,7 +50,7 @@ function PreferToStay() {
                         </div>
                         
                         <Radio7Value.Provider value={{countState: state7, countDispatch: dispatch}}><Radio5 data={Data.que7} id={"roi4"} /></Radio7Value.Provider>
-                        {/* <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button> */}
+                        
                     </div>
                 </div>
         </div>

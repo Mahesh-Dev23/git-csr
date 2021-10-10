@@ -10,14 +10,7 @@ export const Radio2Value = React.createContext()
 function Loyalty({data}) {
     const captureQue2Values = useContext(getResponce)
     const [radioArray, setRadioArray] = useState([])
-    //console.log( radioArray )
-
     
-    
-    
-    //element2.scrollIntoView(alignToTop);
-    // element2.scrollIntoView({block: "start"});
-    // element2.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
     const reducer = (state, action)=>{
         switch(action.type){
@@ -32,7 +25,6 @@ function Loyalty({data}) {
     const [newState2, dispatch] = useReducer( reducer, radioArray)
 
     const radioClicked = (n, d) => {
-        //dispatch({type:'demo', value:d, name: n})
         captureQue2Values.countDispatch({type:'que2', value:newState2})
     }
    
@@ -51,18 +43,11 @@ function Loyalty({data}) {
                 captureQue2Values.countDispatch({type:'count', value:3})
             }
             console.log(Object.keys(newState2).length )
-            
-            
-            //moveTop()
-
 
         }
     },[newState2])
 
-    const nextPrev = () =>{
-        //captureQue2Values.countDispatch({type:'que2', value:newState})
-    }
-    // console.log(newState)
+   
     return (
         <div className="section" id="loyalty" >
             <div className="panel panel-default">
@@ -77,7 +62,7 @@ function Loyalty({data}) {
                         <form  >
                             <Radio2Value.Provider value={{countState: newState2, countDispatch: dispatch}}>< Radio5 data={data} /></Radio2Value.Provider>                             
                         </form>    
-                            {/* <button type="submit" className="btn btn-primary" onClick={() => nextPrev()}>Next</button> */}
+                           
                         </div>
                     </div>
                 </div>

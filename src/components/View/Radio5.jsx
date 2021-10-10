@@ -16,14 +16,7 @@ function Radio5({data}) {
     const captureRadio5bValues = useContext(Radio5bValue)
     const captureRadio7Values = useContext(Radio7Value)
     const sec = data.sec
-    //console.log(sec)
-    const [pos, setPos] = useState(0)
-    const moveTop = ()=>{ 
-        const element2 = document.getElementById("demo")
-        setPos( pos - 50)
-        element2.style.marginTop = pos + "px"
-        element2.style.color = "red"
-    }
+    
 
     const radioClicked = (n, d) => {
         if(sec.startsWith("Q.2") ){
@@ -39,7 +32,7 @@ function Radio5({data}) {
         }else if(sec.startsWith("Q.7")){
             captureRadio7Values.countDispatch({type:'preferToStay', value:d, name: n})
         }
-        //moveTop()
+       
     }
     
     return (
