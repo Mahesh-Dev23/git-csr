@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/git-csr/static/css/main.97faff63.chunk.css",
-    "main.js": "/git-csr/static/js/main.28f8958d.chunk.js",
-    "main.js.map": "/git-csr/static/js/main.28f8958d.chunk.js.map",
-    "runtime-main.js": "/git-csr/static/js/runtime-main.a76eced1.js",
-    "runtime-main.js.map": "/git-csr/static/js/runtime-main.a76eced1.js.map",
-    "static/js/2.6e979dc6.chunk.js": "/git-csr/static/js/2.6e979dc6.chunk.js",
-    "static/js/2.6e979dc6.chunk.js.map": "/git-csr/static/js/2.6e979dc6.chunk.js.map",
-    "static/js/3.71afe0e3.chunk.js": "/git-csr/static/js/3.71afe0e3.chunk.js",
-    "static/js/3.71afe0e3.chunk.js.map": "/git-csr/static/js/3.71afe0e3.chunk.js.map",
+    "main.css": "/git-csr/static/css/main.6ba9f9fb.chunk.css",
+    "main.js": "/git-csr/static/js/main.448389f2.chunk.js",
+    "main.js.map": "/git-csr/static/js/main.448389f2.chunk.js.map",
+    "runtime-main.js": "/git-csr/static/js/runtime-main.ccaf4e58.js",
+    "runtime-main.js.map": "/git-csr/static/js/runtime-main.ccaf4e58.js.map",
+    "static/js/2.08bb97f5.chunk.js": "/git-csr/static/js/2.08bb97f5.chunk.js",
+    "static/js/2.08bb97f5.chunk.js.map": "/git-csr/static/js/2.08bb97f5.chunk.js.map",
+    "static/js/3.a9c21c25.chunk.js": "/git-csr/static/js/3.a9c21c25.chunk.js",
+    "static/js/3.a9c21c25.chunk.js.map": "/git-csr/static/js/3.a9c21c25.chunk.js.map",
     "index.html": "/git-csr/index.html",
-    "static/css/main.97faff63.chunk.css.map": "/git-csr/static/css/main.97faff63.chunk.css.map",
-    "static/js/2.6e979dc6.chunk.js.LICENSE.txt": "/git-csr/static/js/2.6e979dc6.chunk.js.LICENSE.txt",
+    "static/css/main.6ba9f9fb.chunk.css.map": "/git-csr/static/css/main.6ba9f9fb.chunk.css.map",
+    "static/js/2.08bb97f5.chunk.js.LICENSE.txt": "/git-csr/static/js/2.08bb97f5.chunk.js.LICENSE.txt",
     "static/media/manoj.0acd41b5.png": "/git-csr/static/media/manoj.0acd41b5.png",
-    "static/media/main.scss": "/git-csr/static/media/q7.451045a2.png",
+    "static/media/admin.scss": "/git-csr/static/media/q7.451045a2.png",
     "static/media/thanks.b5ee13fb.png": "/git-csr/static/media/thanks.b5ee13fb.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a76eced1.js",
-    "static/js/2.6e979dc6.chunk.js",
-    "static/css/main.97faff63.chunk.css",
-    "static/js/main.28f8958d.chunk.js"
+    "static/js/runtime-main.ccaf4e58.js",
+    "static/js/2.08bb97f5.chunk.js",
+    "static/css/main.6ba9f9fb.chunk.css",
+    "static/js/main.448389f2.chunk.js"
   ]
 }
